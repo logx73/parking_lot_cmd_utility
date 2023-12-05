@@ -16,8 +16,13 @@ public class CarCommands {
     public CarCommands(CarClient carClient){
         this.carClient = carClient;
     }
+
     @ShellMethod(key = "Car")
-    List<Car> getCarByColour(@ShellOption(defaultValue = "red")String colour){
-        return carClient.getCarColour();
+    List<Car> getCarByColour(String colour){
+        return carClient.getCarByColour(colour);
+    }
+    @ShellMethod(key = "Car")
+    List<Car> getAllCar(){
+        return carClient.getAllCars();
     }
 }

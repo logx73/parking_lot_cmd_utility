@@ -1,1 +1,12 @@
 1701781617339:Car
+1701782392387:Car red
+1701782415175:Car --colour red
+1701782477211:help
+1701782485773:stacktrace
+1701782785464:Car --colour red
+1701783310213:Car --colour blue
+1701794640508:create parking --parkingCapacity 100
+1701794666297:help
+1701794691489:create-parking --parkingCapacity 100
+1701794701301:stactrace
+1701794887879:create-parking --parkingCapacity 100
