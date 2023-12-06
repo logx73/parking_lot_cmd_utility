@@ -10,3 +10,11 @@
 1701794691489:create-parking --parkingCapacity 100
 1701794701301:stactrace
 1701794887879:create-parking --parkingCapacity 100
+1701846754642:create-parking --parkingCapacity 2
+1701846854814:park --registrationNumber "MH12SB1234" --colour "black"
+1701847607972:park --registartionNumber "MH12455" --colour "black"
+1701847758529:park --registrationNumber MH123455 --colour black
+1701847906761:park -s MH -c black
+1701848645342:stack trace
+1701848651358:help
+1701848699027:parking-car -s MH12345 -c black
