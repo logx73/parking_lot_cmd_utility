@@ -31,5 +31,4 @@ public class ParkingLotCommands {
         ticket.setParkingLot(null);
         return parkingClient.park(ticket);
     }
-
 }

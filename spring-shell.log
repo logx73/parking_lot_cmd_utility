@@ -18,3 +18,33 @@
 1701848645342:stack trace
 1701848651358:help
 1701848699027:parking-car -s MH12345 -c black
+1701864451910:help
+1701864489320:get-ticket-by-registration-number -s Mh12345
+1701886385505:help
+1701886422479:get-ticket-by-registration-number -s MH12345
+1701886450205:stack-trace
+1701886456008:stacktrace
+1701886574710:get-ticket-by-registration-number -s MH12345
+1701887022171:get-ticket-by-registartion-number -s MH12345
+1701887061301:get-ticket-by-registration-number -s MH12345
+1701887205046:help
+1701887244164:parking-car -s MH23452 -c red
+1701887266476:parking-car -s MH56342 -c black
+1701888495069:help
+1701888542057:create-parking --parkingCapacity 5
+1701888600494:parking-car -s MH12SB7322 -c black
+1701888634140:parking-car -s MH17AD7373 -c white
+1701888679801:parking-car -s MH17GV6745 -c white
+1701888705395:parking-car -s MH14GF9363 -c black
+1701888730597:parking-car -s MH18JF6484 -c grey
+1701888778486:Car --colour black
+1701888809486:Car
+1701888867462:Car --colour white
+1701888882482:car --colour white
+1701888913751:Car --colour black
+1701888965380:get-ticket-by-registration-number -s MH17SB7322
+1701889067928:get-tickets-by-colour -c blac
+1701889079064:stacktrace
+1701889131998:help
+1701889157634:get-tickets-by-colour -c black
+1701889195210:get-ticket-by-registration-number -s MH12SB7322
