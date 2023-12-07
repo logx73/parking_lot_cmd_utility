@@ -48,3 +48,42 @@
 1701889131998:help
 1701889157634:get-tickets-by-colour -c black
 1701889195210:get-ticket-by-registration-number -s MH12SB7322
+1701930925645:Car --colour black
+1701930970001:Car -c black
+1701931005523:get-car-by-colour -c black
+1701931009046:help
+1701931081636:car colour -c black
+1701931166098:create-parking --parkingCapacity 6
+1701931196389:parking-car -s MH12345 -c black
+1701931214437:parking-car -s MH45362 -c red
+1701931236255:parking-car -s MH53736 -c black
+1701931251177:parking-car -s MH9443 -c white
+1701931261010:car colour -c black
+1701931285437:car-colour -c 123
+1701931326384:car-colour -c ASC123
+1701931402954:car-colour -c bl0ck
+1701931412685:car-colour -c black
+1701931465300:car
+1701931474584:car colour -c bl1c
+1701931494680:stacktrace
+1701933889037:help
+1701934150561:park -cpty 10
+1701934327114:help park
+1701934808636:help
+1701935588091:help create-parking
+1701935614147:create-parking -cpty 10
+1701935626205:create-parking --cpty
+1701935643291:create-parking --cpty 10
+1701935690109:help park-car
+1701935717518:park-car --regNo MHSB7322 --col black
+1701935741115:park-car --regNo MHLG2373 --col white
+1701935763037:park-car --regNo MHPG6373 --col black
+1701935788100:all-car
+1701935813783:car-by-colour --col black
+1701936140153:ticket-by-reg-no help
+1701936146776:help
+1701936175587:ticket-by-reg-no --regNo MHSB7322
+1701936272117:ticket-by-reg-no --col black
+1701936315102:ticket-by-reg-no --regNo MHSB7322
+1701936346530:tickets-by-col --col black
+1701936355373:clear

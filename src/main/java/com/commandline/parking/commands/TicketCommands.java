@@ -1,6 +1,6 @@
 package com.commandline.parking.commands;
 
-import com.commandline.parking.client.ParkingClient;
+import com.commandline.parking.client.ParkingSystemClient;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
@@ -10,18 +10,18 @@ import java.util.List;
 @ShellComponent
 public class TicketCommands {
 
-    private ParkingClient parkingClient;
+    private ParkingSystemClient parkingSystemClient;
 
-    public TicketCommands(ParkingClient parkingClient) {
-        this.parkingClient = parkingClient;
+    public TicketCommands(ParkingSystemClient parkingSystemClient) {
+        this.parkingSystemClient = parkingSystemClient;
     }
-    @ShellMethod("ticket")
-    public Long getTicketByRegistrationNumber(@ShellOption(value = "-s") String registrationNumber){
-        return parkingClient.getTicketByRegistrationNumber(registrationNumber);
+    @ShellMethod(value = "This command is used to get ticket no by car registration no.")
+    public Long ticketByRegNo(@ShellOption(help = "Write the registration number of Car") String regNo){
+        return parkingSystemClient.getTicketByRegistrationNumber(regNo);
     }
 
-    @ShellMethod("ticket")
-    public List<Long> getTicketsByColour(@ShellOption(value = "-c") String colour){
-        return parkingClient.getTicketsByColour(colour);
+    @ShellMethod(value = "This command is used to get ticket no's by car colour.")
+    public List<Long> ticketsByCol(@ShellOption(help = "Write the colour of Car") String col){
+        return parkingSystemClient.getTicketsByColour(col);
     }
 }

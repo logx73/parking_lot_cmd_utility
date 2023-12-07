@@ -1,7 +1,6 @@
 package com.commandline.parking;
 
-import com.commandline.parking.client.CarClient;
-import com.commandline.parking.client.ParkingClient;
+import com.commandline.parking.client.ParkingSystemClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -16,23 +15,12 @@ public class ParkingApplication {
 		SpringApplication.run(ParkingApplication.class, args);
 	}
 	@Bean
-	CarClient getCarClient(){
+	ParkingSystemClient getParkingSystemClient(){
 		WebClient client = WebClient.builder()
 				.baseUrl("http://localhost:8080")
 				.defaultHeader("Accept","application/json")
 				.build();
 		HttpServiceProxyFactory factory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(client)).build();
-		return factory.createClient(CarClient.class);
+		return factory.createClient(ParkingSystemClient.class);
 	}
-
-	@Bean
-	ParkingClient getParkingClient(){
-		WebClient client = WebClient.builder()
-				.baseUrl("http://localhost:8080")
-				.defaultHeader("Accept","application/json")
-				.build();
-		HttpServiceProxyFactory factory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(client)).build();
-		return factory.createClient(ParkingClient.class);
-	}
-
 }

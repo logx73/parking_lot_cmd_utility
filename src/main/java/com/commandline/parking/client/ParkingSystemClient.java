@@ -1,5 +1,6 @@
 package com.commandline.parking.client;
 
+import com.commandline.parking.model.Car;
 import com.commandline.parking.model.Ticket;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,7 +10,13 @@ import org.springframework.web.service.annotation.PostExchange;
 
 import java.util.List;
 
-public interface ParkingClient {
+public interface ParkingSystemClient {
+    @GetExchange("/v1/parking-management/cars")
+    List<Car> getAllCars();
+
+    @GetExchange("/v1/parking-management/cars/{colour}")
+    List<String> getCarByColour(@PathVariable String colour);
+
     @PostExchange("/v1/parking-management/parking/{parkingCapacity}")
     String createParking(@PathVariable Integer parkingCapacity);
 
@@ -21,4 +28,5 @@ public interface ParkingClient {
 
     @GetExchange("/v1/parking-managment/tickets")
     List<Long> getTicketsByColour(@RequestParam String colour);
+
 }

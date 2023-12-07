@@ -1,6 +1,6 @@
 package com.commandline.parking.commands;
 
-import com.commandline.parking.client.ParkingClient;
+import com.commandline.parking.client.ParkingSystemClient;
 import com.commandline.parking.model.Car;
 import com.commandline.parking.model.Ticket;
 import org.springframework.shell.standard.ShellComponent;
@@ -10,25 +10,25 @@ import org.springframework.shell.standard.ShellOption;
 @ShellComponent
 public class ParkingLotCommands {
 
-    private ParkingClient parkingClient;
+    private ParkingSystemClient parkingSystemClient;
 
-    public ParkingLotCommands(ParkingClient parkingClient) {
-        this.parkingClient = parkingClient;
+    public ParkingLotCommands(ParkingSystemClient parkingSystemClient) {
+        this.parkingSystemClient = parkingSystemClient;
     }
 
-    @ShellMethod("create parking")
-    String createParking(Integer parkingCapacity){
-        return parkingClient.createParking(parkingCapacity);
+    @ShellMethod(value = "This command is used to create parking lot.")
+    String createParking(@ShellOption(help = "Write the capacity of parking space") Integer cpty){
+        return parkingSystemClient.createParking(cpty);
     }
 
-    @ShellMethod("park")
-    Ticket parkingCar(@ShellOption(value = "-s") String registrationNumber,@ShellOption(value = "-c") String colour){
+    @ShellMethod(value = "This command is used to park the car.")
+    Ticket parkCar(@ShellOption(help = "Write the registration number of Car") String regNo,@ShellOption(help = "Write the colour of the car") String col){
         Car car = new Car();
-        car.setRegistrationNumber(registrationNumber);
-        car.setColour(colour);
+        car.setRegistrationNumber(regNo);
+        car.setColour(col);
         Ticket ticket = new Ticket();
         ticket.setCar(car);
         ticket.setParkingLot(null);
-        return parkingClient.park(ticket);
+        return parkingSystemClient.park(ticket);
     }
 }
