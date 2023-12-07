@@ -87,3 +87,10 @@
 1701936315102:ticket-by-reg-no --regNo MHSB7322
 1701936346530:tickets-by-col --col black
 1701936355373:clear
+1701943815594:help
+1701943883827:help all-car
+1701943932749:ar-by-colour
+1701943955702:help car-by-colour
+1701944009590:help park-car
+1701944143480:help create-parking
+1701944220621:help tickets-by-col
